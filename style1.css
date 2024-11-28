@@ -1,0 +1,602 @@
+@font-face{
+    font-family: 'OldEnglish';
+    src: url(   './fonts/olde_english/OldeEnglish.ttf');
+}
+
+body{
+    background-color: #000;
+    font-family: 'OldEnglish';
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-top: 200px;
+}
+.text{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    
+}
+main{
+    margin-top: 150px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #d6d6d5;
+}
+
+a:active{
+    color: #d6d6d5;
+}
+
+a:link{
+    color: #d6d6d5;
+}
+
+a:visited{
+    color: #d6d6d5;
+}
+
+/**********************************/
+
+.imgHeader {
+    padding-left: 20px;
+    display: inline;
+    transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+.imgHeader.shrink {
+    transform: scale(0.6, 1);
+}
+
+.searchbar{
+    color: #d6d6d5;
+    display: inline-flex;
+    align-items: top;
+}
+
+.listDiv{
+    color: #d6d6d5;
+    text-decoration: none;
+    
+}
+
+#list{
+        display: none;
+    align-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.twoItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topItems{
+    margin-top: 0px;
+    
+}
+.topItems > div {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px; /* padding padrão */
+    transition: transform 0.3s ease, padding 0.3s ease; /* Animação suave */
+    z-index: 1000;
+    margin-top: 0px;
+}
+
+
+
+.topItems.shrink > div{
+    transform: scale(1, 0.6); /* Reduz o tamanho sem alterar a altura fixamente */
+
+}
+
+.topItems.shrink{
+    margin-top: 0px;
+}
+.menuIcon{
+    display: inline;
+    padding-left: 40px;
+    padding-right: 40px;   /*talvez tenha que mudar isso depois*/ 
+    transition: transform 0.9s ease, top 0.9s ease, left 0.9s ease;
+    position: relative;
+}
+
+
+.menuIcon:hover{
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in;
+    
+}
+
+
+
+#iconMenu{
+
+}
+
+.middleMenuIcon{
+    position: fixed; /* Para poder mover livremente */
+    top: 50%; /* Move para o centro vertical */
+    left: 50%; /* Move para o centro horizontal */
+    transform: translate(-50%, -50%) rotate(720deg); /* Ajusta o deslocamento e a rotação */
+    transition: transform 2s ease-in-out, top 1s ease-in-out, left 1s ease-in-out; /* Animação suave */
+    z-index: 9999; /* Garante que fique sobre os outros elementos */
+}
+
+.title{
+    padding-top: 20px;
+    display: inline;
+}
+
+.imgHeader, .title, .menuIcon {
+    display: inline-flex; /* Usa flex ao invés de inline */
+    align-items: center;  /* Alinha os itens verticalmente */
+}
+
+.bigContainer{
+    position: relative;
+    width: 100%;
+    height: 650px;
+
+}
+
+.bigContainer2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content{
+    position: absolute;
+    top: 100;
+    left: 0;
+    width: 100%;
+   height: 350px;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+
+}
+
+.content2{
+    position: absolute;
+    top: 100;
+    left: 0;
+    width: 100%;
+   height: 350px;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+
+}
+
+
+.bigText{
+    color: #d6d6d5;
+    font-size: 250px;
+    display: flex;
+    justify-content: center;
+    padding-top: 325px;
+    
+    width: 100%;
+   
+    height: 100%;
+}
+
+#slide{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.altTopItems{
+    background-color: #000;
+    position: fixed;
+    margin-top: 0px;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.firstImage{
+    position: absolute;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 170px;
+}
+
+
+.containerSlides{
+    height: 500px;
+    width: 100%;
+    position: asbolute;
+    z-index: 3;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #d6d6d5;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease-in;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 100;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.containerText{
+    position: absolute;
+  width: 100hv;
+    display: inline;
+    padding-top: 100px;
+    padding-left: 100px;
+
+}
+/* Caption text */
+.text1 {
+  color: #d6d6d5;
+  font-size: 70px;
+
+}
+
+.text1 > div{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #d6d6d5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.imgSlides{
+    display: inline;
+}
+
+.containerSecondImage img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+    padding-top: 50px;
+  }
+  
+.containerThreeImages{
+    height: 100%;
+    width: 100%;
+}
+
+.threeImages{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.containerCovers{
+    height: 100%;
+    width: 100%;
+
+}
+
+.covers{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-right: 40px;
+
+}
+
+.hoverImg{
+    display: flex;
+}
+
+.hoverImg:hover{
+    transform: scale(1.2);
+}
+
+.flip-box-container {
+    display: flex;
+    gap: 20px; /* Espaçamento entre as caixas */
+    margin: 40px;
+    position: absolute;
+    z-index: 10;
+}
+.flip-box {
+    background-color: transparent;
+    width: 400px;
+    height: 470px;
+    border: 1px solid #000000;
+    perspective: 1000px;
+    cursor: pointer;
+    
+}
+
+/* Caixa interna com a animação de rotação */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Aplicação da rotação quando a classe .flipped é adicionada */
+.flip-box-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Frente e verso posicionados adequadamente */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Estilo do lado frontal */
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Estilo do lado traseiro com rotação */
+.flip-box-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    z-index: 10;
+}
+
+.iconLupa{
+
+}
+
+#lupa{
+    position: absolute;
+    z-index: 200;
+    padding-left: 17%;
+    padding-top: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+#lupa2{
+    position: absolute;
+    z-index: 200;
+    padding-left: 50%;
+    padding-top: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+
+#lupa3{
+    position: absolute;
+    z-index: 200;
+    padding-left: 82%;
+    padding-top: 5px;
+    display: none;
+    cursor: pointer;
+}
+#lupa.resized{
+    transform: scale(1.2);
+}
+
+#backImg{
+
+}
+
+#backImg.resized{
+    transform: scale(1.2);
+    
+}
+
+
+
+#fullImg1{
+
+    position: fixed; /* Fixa a posição para cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largura de 100% da janela de visualização */
+    height: 100vh; /* Altura de 100% da janela de visualização */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 9997; /* Garante que fique acima de outros elementos */
+    object-fit: contain;
+}
+#fullImg2{
+
+    position: fixed; /* Fixa a posição para cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largura de 100% da janela de visualização */
+    height: 100vh; /* Altura de 100% da janela de visualização */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 9998; /* Garante que fique acima de outros elementos */
+    object-fit: contain;
+}
+
+#fullImg3{
+
+    position: fixed; /* Fixa a posição para cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largura de 100% da janela de visualização */
+    height: 100vh; /* Altura de 100% da janela de visualização */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 9999; /* Garante que fique acima de outros elementos */
+    object-fit: contain;
+}
+
+#folha{
+
+}
+#folha:hover{
+    cursor: zoom-in;
+    transform: scale(1.2);
+}
+
+.containerLupas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img2Query{
+
+}
+
+.pezinho{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+}
+
+.estrela{
+    position: absolute;
+    z-index: 20001;
+    opacity: 1;
+}
+
+.estrelaOpacidade{
+    transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;  
+    -moz-transition: opacity 2s ease-in-out; 
+    opacity: 0.1; /* Opacidade final */
+
+    transform: rotate(360deg);
+    transition: all 0.8s ease-in;
+    
+}
+
+.textoEstrela{
+    position: absolute;
+    z-index: 20003;
+    color: #d6d6d5;
+    font-size: 100px ;
+    
+    display: none;
+    
+     
+ justify-content: center;  
+    margin-left: 300px;
+}
+
+
+#entirePage{
+
+}
+
+#iconMenuOnMenu{
+    position: absolute;
+    z-index: 20003;
+    top: 70px;
+    right: 30px;
+
+}
+
+#iconMenuOnMenu:hover{
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in;
+    
+}
+
+#altIconMenu{
+
+}
