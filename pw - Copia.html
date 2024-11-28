@@ -12,7 +12,7 @@
 </head>
 
 
-<body >
+<body onload="maquina()" >
     <div>
         <div class="pezinho" id="menuzao">
             <img class="estrela" src="./imgs/estrela.png"> <!-- Aqui o class é apenas "estrela" -->
@@ -178,11 +178,13 @@
                             Caption Text
                         <br>
                         ────────
-                            <div class="secundary-font">
+                            <div class="secundary-font" >
                                 Ano: 1991 
                                 <br>
                                 Gênero: <br>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div  id="carrossel1">
+                                
+                                </div>
                             </div>
 
                         </div>
@@ -200,10 +202,11 @@
                               Caption Text
                           <br>
                           ────────
-                              <div>
+                              <div class="secundary-font">
                                   Ano: 1992
                                   <br>
-                                  Gênero:
+                                  Gênero: <br>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                               </div>
   
                           </div>
@@ -220,10 +223,11 @@
                               Caption Text
                           <br>
                           ────────
-                              <div>
+                              <div class="secundary-font">
                                   Ano: 1993
                                   <br>
-                                  Gênero:
+                                  Gênero:<br>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                               </div>
   
                           </div>
@@ -575,6 +579,19 @@ image.addEventListener('click', function() {
     }, 50); // 100ms de atraso para dar tempo do display entrar
  
  });
+
+var txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+var speed = 50;
+var i = 0;
+function maquina(){
+    if (i < txt.length){
+        document.getElementById("carrossel1").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(maquina, speed);
+    }
+}
+
+
 
 </script>
 </body>
