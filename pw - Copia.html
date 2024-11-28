@@ -12,7 +12,7 @@
 </head>
 
 
-<body onload="maquina()" >
+<body >
     <div>
         <div class="pezinho" id="menuzao">
             <img class="estrela" src="./imgs/estrela.png"> <!-- Aqui o class é apenas "estrela" -->
@@ -23,7 +23,7 @@
             
         </div>
         
-        <div class="textoEstrela">
+        <div class="textoEstrela" >
             
             <ul>
 <div>        
@@ -150,7 +150,7 @@
         <div class="firstImage">
             <img src="./imgs/firstimg.png" width="400px">
         </div>
-        <div class="text">
+        <div class="text" id="scroll-event">
             <div class="bigText">
                 
                 Black Legion
@@ -592,6 +592,14 @@ function maquina(){
 }
 
 
+document.getElementById("scroll-event").addEventListener("scroll", maquina());
+function maquina(){
+    if (i < txt.length){
+        document.getElementById("carrossel1").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(maquina, speed);
+    }
+}
 
 </script>
 </body>
