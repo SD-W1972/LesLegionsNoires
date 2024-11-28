@@ -1,8 +1,13 @@
 @font-face{
     font-family: 'OldEnglish';
     src: url(   './fonts/olde_english/OldeEnglish.ttf');
+    
 }
 
+@font-face{
+    font-family: 'maquina';
+    src:url('./fonts/Mom.ttf');
+}
 body{
     background-color: #000;
     font-family: 'OldEnglish';
@@ -599,4 +604,8 @@ a:visited{
 
 #altIconMenu{
 
+}
+
+.secundary-font{
+    font-family: 'maquina';
 }
