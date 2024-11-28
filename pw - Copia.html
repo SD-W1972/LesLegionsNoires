@@ -206,8 +206,10 @@
                                   Ano: 1992
                                   <br>
                                   Gênero: <br>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                              </div>
+                                    <div id="carrossel2">
+
+                                    </div>
+                                </div>
   
                           </div>
                       </div>
@@ -227,8 +229,11 @@
                                   Ano: 1993
                                   <br>
                                   Gênero:<br>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                              </div>
+<div id="carrossel3">
+
+</div>
+
+                                </div>
   
                           </div>
                       </div>
@@ -236,8 +241,8 @@
             </div>
               </div>
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1); ">&#10094;</a>
+            <a class="next" onclick="plusSlides(1); maquina2()">&#10095;</a>
           </div>
           <br>
           <br>
@@ -581,8 +586,13 @@ image.addEventListener('click', function() {
  });
 
 var txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+var txt2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo';
+var txt3 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo';
+
 var speed = 50;
 var i = 0;
+var j = 0;
+var k = 0;
 function maquina(){
     if (i < txt.length){
         document.getElementById("carrossel1").innerHTML += txt.charAt(i);
@@ -598,6 +608,21 @@ function maquina(){
         document.getElementById("carrossel1").innerHTML += txt.charAt(i);
         i++;
         setTimeout(maquina, speed);
+    }
+}
+
+function maquina2(){
+    if (j < txt2.length){
+        document.getElementById("carrossel2").innerHTML += txt2.charAt(j);
+        j++;
+        setTimeout(maquina2, speed);
+    }
+}
+function maquina3(){
+    if (k < txt3.length){
+        document.getElementById("carrossel3").innerHTML += txt3.charAt(k);
+        k++;
+        setTimeout(maquina3, speed);
     }
 }
 
