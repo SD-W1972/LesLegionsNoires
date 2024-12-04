@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
-<body>
+<body onload="displayTitulo(); setTimeout(toggleDescription, 1000)">
     <div>
         <div class="pezinho" id="menuzao">
             <img class="estrela" src="./imgs/estrela.png"> <!-- Aqui o class é apenas "estrela" -->
@@ -23,9 +23,9 @@
         
         <div class="textoEstrela" >
             <div class="menuTextos">
-                <a href="#entirePage" onclick="anchorHome()" class="organizaTextos" > Home</a>
+                <a href="./pw - Copia.html" onclick="anchorHome()" style="margin-bottom: 150px;" class="organizaTextos" > Home</a>
            
-                <a href="./page2copia.html" id="textoEsquerda" > Pagina2</a>
+                <a href="./page2copia.html" id="textoEsquerda"  > Pagina2</a>
                 
                 <a href="./page3copia.html"  class="organizaTextos"> Pagina3</a>
                 <a href="#entirePage" id="textoEsquerda2" > About</a>
@@ -110,74 +110,81 @@
                 <img id="altIconMenu" src="./imgs/iconMenu.svg" width="30px" height="40px">
             </div>
 
-        </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        qwddwqdw
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        edwqdqwd
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
 
    </header>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+        <div id="titulo">
+            
+        </div>
+    </center>
+    <br>
+    <br>
+
+
+    <div id="description">
+        Vordb was member of numerous bands related to Les Légions Noires. Other bands include Vèrhzlav. In 2014 he founded the record label Kaleidarkness.
+Do not confuse with Vordb Bathord Ecsed (fake artist)!
+
+        <p>
+            Little to nothing is know about his personality. He was the founder, thought leader and author of the eerie Gloatre language - used in most of the projects' names and releases - Vordb Bathor Ecsed (a.k.a. Vordb Dréagvor Uèzréèvb or Vordb Na R.iidr) nowadays is engaged in clearing the archives of the Legions and restoring old records through his Kaleidarkness, other than working on new music projects.
+            With the brotherhood disband in 1997, almost all the projects in it disbanded too; few members joined or started new groups, others quit music.
+            
+        </p>
+
+    <div style="font-size: 60px;">
+        Gloatre Language:
+    </div>
+    <br>
+    Gloatre was a self made language no one really know about. To this day, with the countless releases on LLN featuring this language, we still can't decipher none of the words
+
+    <br>
+    <br>
+    One of Vordb's most notable projects, Brenoritvrezorkre, was know for using entirely Gloatre
+<br>
+<br>
+<center>    <img src="./imgs/genocide.png" alt="Genocide" width="600px"> </center>
+</div>
+</div>
 </div>
 <script>
 
+function toggleDescription(){
+    const xereca = document.getElementById('description');
+    xereca.style.display = "block"
+}
+
+var textoTitulo = 'Vordb';
+var i = 0;
+var speed = 130;
+function displayTitulo(){
+    if(i < textoTitulo.length){
+        document.getElementById("titulo").innerHTML += textoTitulo.charAt(i);
+        i++;
+        setTimeout(displayTitulo, speed);
+
+    }
+}
 
 const topItems = document.querySelector('.topItems');
   const imgHeader = document.querySelector('.imgHeader');
