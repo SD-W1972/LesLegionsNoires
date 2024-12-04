@@ -581,7 +581,9 @@ a:visited{
     
      
  justify-content: center;  
-    margin-left: 300px;
+    margin-top
+    : 100px;
+    margin-left: 250px;
 }
 
 
@@ -609,4 +611,15 @@ a:visited{
 
 .secundary-font{
     font-family: 'maquina';
+}
+
+.menuTextos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.organizaTextos{
+    margin-right: 300px;
+    margin-bottom: 300px;
 }
