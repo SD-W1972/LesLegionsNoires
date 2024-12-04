@@ -623,3 +623,15 @@ a:visited{
     margin-right: 300px;
     margin-bottom: 300px;
 }
+
+#introductionId{
+    margin: 0 auto;
+    color: white;
+    font-size: 30px;
+}
+
+#conteudo{
+    color: white;
+    font-size: 30px;
+    font-family: 'maquina';
+}

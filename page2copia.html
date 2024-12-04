@@ -145,7 +145,44 @@
 
    </header>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<button onclick="introFunction()">clica</button>
+
+<center>
+<div id="conteudo">
+
+asfasfas
+</div>
+</center>
 <script>
+var introductionVar = 'In the early 90s a small,tight knit, group of French musicians calling themselves Les Legions Noir created some of the most unnerving and original music to ever come from the black metal scene. Most recordings were never released properly or released in extremely limited numbers on cassette only formats.These recordings are some of the most sought after ever.'
+var i = 0;
+var speed = 60;
+function introFunction(){
+    if (i < introductionVar.length){
+        document.getElementById("conteudo").innerHTML += introductionVar.charAt(i);
+        i++;
+        setTimeout(introFunction, speed);
+    }
+
+}
 
 
 const topItems = document.querySelector('.topItems');

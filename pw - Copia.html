@@ -142,6 +142,9 @@
 
     </header>
 
+    <div id="introductionId">
+    </div>
+
     <main>
         <div class="slideshow-container">
 
@@ -566,6 +569,8 @@ var txt = 'Raw Black Metal.';
 var txt2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo';
 var txt3 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo';
 
+var introductionVar = 'In the early 90s a small,tight knit, group of French musicians calling themselves Les Legions Noir created some of the most unnerving and original music to ever come from the black metal scene. Most recordings were never released properly or released in extremely limited numbers on cassette only formats.These recordings are some of the most sought after ever.'
+
 var speed = 100;
 var i = 0;
 var j = 0;
@@ -578,15 +583,19 @@ function maquina(){
     }
 }
 
+function introductionFunction(){
+    if(gg < introductionVar.length){
+        document.getElementById("introductionId").innerHtml += introductionVar.charAt(gg);
+        gg++;
+        setTimeOut(introductionFunction, speed);
+    } 
+}
+
 
 document.getElementById("scroll-event").addEventListener("scroll", maquina());
-function maquina(){
-    if (i < txt.length){
-        document.getElementById("carrossel1").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(maquina, speed);
-    }
-}
+
+document.getElementById("scroll-event").addEventListener("scroll", maquina());
+
 
 function maquina2(){
     if (j < txt2.length){
