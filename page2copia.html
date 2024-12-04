@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
-<body>
+<body onload="setTimeout(introFunction, 1000); setTimeout(displayToggle, 2000)">
     <div>
         <div class="pezinho" id="menuzao">
             <img class="estrela" src="./imgs/estrela.png"> <!-- Aqui o class é apenas "estrela" -->
@@ -163,25 +163,63 @@
 <br>
 <br>
 
-<button onclick="introFunction()">clica</button>
 
 <center>
-<div id="conteudo">
+<div id="conteudo" onselect="introFunction()">
 
-asfasfas
+
 </div>
 </center>
+
+
+
+
+<button class="botaoSkip" id="botaoSkipId" onclick="introFunction()">skip</button>
+
+<div class="mainConteudo">
+<center>
+    Belketre/Vlad Tepes Split
+</center>
+<br>
+    <div class="textoBelketre">
+
+        Arguably the cream of the LLN crop, the March to the Black Holocaust split could basically be viewed as a compilation of two albums from two of the most acclaimed French Black Metal bands of the 90s.
+        <br>
+        <br>
+
+        Vlad Tepes' contribution is a riff factory, with an onslaught of grade-A Black Metal riffs, from a nice variety of influences. For example, you'd be forgiven for mistaking In Holocaust to the Natural Darkness for an early Bathory track. That track and the last two Vlad Tepes tracks on this split feature super catchy and rocking riffs that could easily be considered Black 'n' Roll. On the other hand you have the mammoth Drink the Poetry of the Celtic Disciple, which takes a more repetitious and cyclic approach in the vein of Norwegian contemporaries.
+    <br>    
+    <br>
+    Belkètre on the other hand is more typical in it's style of vampiric Black Metal. The tracks are ferocious and hungry, with a more noisy approach to production that only enhances that energy. Regardless, Belkètre doesn't skimp on the riffs, preferring a more dissonant and abstract style. While this half of the split does not boast danceable highlights, it is a cohesive and atmospheric package, aided in no small part by ambient tracks scattered throughout, with twilight-shrouded soundscapes and backwards talking goblins for good measure.
+        <br>
+        <br>
+        The music on offer here is solid all the way through, making this a highly recommended piece of 90s Black Metal, especially for those looking to find stuff outside of the Norway bubble.
+        
+         
+    </div>
+
+</div>
+
 <script>
 var introductionVar = 'In the early 90s a small,tight knit, group of French musicians calling themselves Les Legions Noir created some of the most unnerving and original music to ever come from the black metal scene. Most recordings were never released properly or released in extremely limited numbers on cassette only formats.These recordings are some of the most sought after ever.'
 var i = 0;
 var speed = 60;
+var speed2 = 1;
+
+
+function displayToggle(){
+    
+    const botaoSkipId = document.getElementById('botaoSkipId');
+    botaoSkipId.style.display = "block";
+}
+
 function introFunction(){
+    
     if (i < introductionVar.length){
         document.getElementById("conteudo").innerHTML += introductionVar.charAt(i);
         i++;
         setTimeout(introFunction, speed);
     }
-
 }
 
 

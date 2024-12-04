@@ -634,4 +634,39 @@ a:visited{
     color: white;
     font-size: 30px;
     font-family: 'maquina';
+    margin-right: 100px;
+    margin-left: 100px;
+    position: absolute;
+    z-index: 1;
+}
+
+.botaoSkip{
+    color:white;
+    font-family: 'OldEnglish';
+    font-size: 30px;
+    background-color: #000000;
+    border-color: white;
+    border-radius: 10%;
+    margin-left: 80%;
+    display: none;
+    margin-top: 300px;
+    position: absolute;
+    z-index: 10000;
+}
+
+.mainConteudo{
+    font-family: 'OldEnglish';
+    font-size: 100px;
+    color: white;
+    margin-top: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+    
+}
+
+.textoBelketre{
+    color: white;
+    font-family: 'maquina';
+    font-size: 30px;
 }
