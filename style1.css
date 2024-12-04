@@ -575,7 +575,7 @@ a:visited{
     position: absolute;
     z-index: 20003;
     color: #d6d6d5;
-    font-size: 100px ;
+    font-size: 85px ;
     
     display: none;
     
@@ -622,6 +622,13 @@ a:visited{
 .organizaTextos{
     margin-right: 300px;
     margin-bottom: 300px;
+}
+
+#textoEsquerda{
+    margin-left: 100px;
+}
+#textoEsquerda2{
+    margin-left: 100px;
 }
 
 #introductionId{
