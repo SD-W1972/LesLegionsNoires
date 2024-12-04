@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Les Legions Noires</title>
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="icon" href="./imgs/lln.jfif">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body><div>
+    <div class="pezinho" id="menuzao">
+        <img class="estrela" src="./imgs/estrela.png"> <!-- Aqui o class é apenas "estrela" -->
+        
+        <div id="iconMenuOnMenu">
+            <img src="./imgs/iconMenu.svg" width="30px" height="40px">
+        </div>
+        
+    </div>
+    
+    <div class="textoEstrela" >
+        <div class="menuTextos">
+            <a href="./pw - Copia.html" onclick="anchorHome()" style="margin-bottom: 150px;" class="organizaTextos" > Home</a>
+       
+            <a href="./page2copia.html" id="textoEsquerda"  > Pagina2</a>
+            
+            <a href="./page3copia.html"  class="organizaTextos"> Pagina3</a>
+            <a href="./about.html" id="textoEsquerda2" > About</a>
+        
+    </div>
+</div>
+<div id="entirePage">
+<header>
+
+    <div class="topItems">
+        
+        <div class="twoItems">
+            <div>
+
+                <div class="imgHeader">
+                    <div>
+                    <img src="./imgs/lln.jfif" width="150px" height="150px">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <img src="./imgs/title.png" width="260px" >
+                </div>
+            </div>
+        <div>
+                
+                <div class="searchbar">
+                    <input id="searchbar" class="inputEngine"
+                    type="text"
+                    name="search"
+                    placeholder="pesquisar"
+                    onclick="toggleList()"
+                    onkeyup="searchMusic()">  
+                
+                </div>
+                
+                
+                <div class="menuIcon">
+                    <img id="iconMenu" src="./imgs/iconMenu.svg" width="30px" height="40px">
+                </div>
+
+            </div>
+
+     
+        </div>
+
+        <div class="listDiv">
+            <ul id='list'>
+                <li class="musics"> 
+                    <a href="./page2.html"
+                    
+                    >Crown of Horns</a> </li>
+             <br>
+                <li class="musics">Slit Your Guts</li>
+                <br>
+                <li class="musics">Graves of the Fathers</li>
+                <br>
+                <li class="musics">Dead and Dripping</li>
+                <br>
+                <li class="musics">Benedictine Convulsions</li>
+                <br>
+                <li class="musics">Phobophile</li>
+                <br>
+                <li class="musics">Lichmistress</li>
+                <br>
+                <li class="musics">Orgiastic Disembowement</li>
+            </ul>
+    
+        </div>
+
+    </div>
+
+
+    <div class="altTopItems">
+        <div class="imgHeader">
+            <div>
+            <img src="./imgs/lln.jfif" width="100px" height="100px">
+            </div>
+        </div>
+
+        <div class="menuIcon">
+            <img id="altIconMenu" src="./imgs/iconMenu.svg" width="30px" height="40px">
+        </div>
+
+
+</header>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+    <div style="font-size: 300px; color: white; text-align: center;">
+        Do Your Research, Poser!
+    </div>
+
+
+    <script>
+        
+const topItems = document.querySelector('.topItems');
+  const imgHeader = document.querySelector('.imgHeader');
+  const altTopItems = document.querySelector('.altTopItems');
+
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { // Quando o scroll ultrapassa 50px
+            // Adiciona a classe `shrink`
+            topItems.style.display = 'none';
+            altTopItems.style.display = 'flex';
+        } else {
+            topItems.style.display = "flex";
+            altTopItems.style.display = "none";
+        }
+    });
+
+    $(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.content').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return 1 - (elementHeight - scrollTop) / elementHeight;
+    }
+  });
+});
+    $(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.content2').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return 1 - (elementHeight - scrollTop) / elementHeight;
+    }
+  });
+});
+
+
+
+
+const image = document.getElementById('iconMenu');
+const image2 = document.getElementById('altIconMenu');
+const menuzao = document.getElementById('menuzao');
+const estrela = document.getElementsByClassName('estrela');
+const entirePage = document.getElementById('entirePage');
+const iconMenuOnMenu = document.getElementById('iconMenuOnMenu');
+const textoEstrela = document.getElementsByClassName('textoEstrela');
+
+image.addEventListener('click', function() {
+            // Adiciona a classe que faz a animação quando clicada
+            menuzao.style.display = "flex";
+            entirePage.style.display = "none";            
+
+            textoEstrela[0].style.display = "flex";
+
+            setTimeout(function() {
+        estrela[0].classList.add("estrelaOpacidade");
+    }, 50); // 100ms de atraso para dar tempo do display entrar
+ 
+ });
+
+ 
+
+ iconMenuOnMenu.addEventListener('click', function(){
+    menuzao.style.display = "none";
+    entirePage.style.display = "block";
+    textoEstrela[0].style.display = "none";
+    estrela[0].classList.remove("estrelaOpacidade");
+ });
+
+
+
+function anchorPg3(){
+    menuzao.style.display = "none";
+    entirePage.style.display = "block";
+    textoEstrela[0].style.display = "none";
+ }
+
+
+
+ 
+ function toggleList() {
+         var list = document.getElementById('list');
+            if (list.style.display === 'none') {
+                list.style.display = 'flex';
+            } else {
+                list.style.display = 'none';
+            }
+     }
+
+     
+    function searchMusic() {
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('musics');
+
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+        x[i].style.display = "none";
+        }
+        else {
+        x[i].style.display = "list-item";
+        }
+    }
+    }
+
+
+
+    image2.addEventListener('click', function() {
+            // Adiciona a classe que faz a animação quando clicada
+            menuzao.style.display = "flex";
+            entirePage.style.display = "none";            
+
+            textoEstrela[0].style.display = "flex";
+
+            setTimeout(function() {
+        estrela[0].classList.add("estrelaOpacidade");
+    }, 50); // 100ms de atraso para dar tempo do display entrar
+ 
+ });
+
+    </script>
+</body>
+</html>
